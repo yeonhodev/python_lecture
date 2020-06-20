@@ -2,6 +2,7 @@ list = []
 list = [1, 2, 3, 4, 5]
 list[0]
 
+#딕셔너리 선언
 dictionary = {
     "keyA": "valueA",
     273: [1, 2, 3, 4],
@@ -14,16 +15,17 @@ print(dictionary[True])
 dictionary["keyA"] = "valuevalue"
 print(dictionary["keyA"])
 
+#반복문
 for key in dictionary:
     print("{} : {}".format(key, dictionary[key]))
 
-# 새로운 키와 값 추가
+# 요소 추가
 dictionary["newkey"] = "newvalue"
 
 for key in dictionary:
     print("{} : {}".format(key, dictionary[key]))
 
-# 값 제거하기
+# 요소 제거
 del dictionary["newkey"]
 print()
 for key in dictionary:
