@@ -31,3 +31,27 @@ def get_circle_area(radius):
 radius = number_input()
 print(get_circumference(radius))
 print(get_circle_area(radius))
+
+#함수를 사용하는 이유
+#함수를 사용하지 않은 경우
+print("<p>{}</p>".format("안녕하세요."))
+print("<p>{}</p>".format("간단한 HTML 태그를 만드는 예입니다."))
+
+#Ouput
+#<p>안녕하세요.</p>
+#<p>간단한 HTML 태그를 만드는 예입니다.</p>
+
+#그런데 갑자기 '단순한 <p></p>로 감싸지 말고, <p class='content-line'></p>로 감싸주세요'라는 요청을 받았다면, 함수를 사용하지 않은 상태에서는 모든 코드를 하나하나 수정해야 한다. -> 실수 발생 가능
+
+#함수를 사용한 경우 -> 협업 및 유지보수에 유리하다.
+#p 태그로 감싸는 함수
+
+def p(content):
+    #기존 코드 주석 처리
+    #return "<p>{}</p>".format(content)
+    # 2020.07.08 요청 반영
+    return "<p class='content-line'>{}</p>".format(content)
+
+#출력합니다. 
+print(p("안녕하세요."))
+print(p("간단한 HTML 태그를 만드는 예 입니다."))
