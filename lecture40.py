@@ -99,3 +99,27 @@ for i in 이터레이터:
 #for반복문을 두번 돌려도 두번 출력 되지 않음
 for i in 이터레이터:
   print(i)
+
+
+#연습문제
+numbers = [1, 2, 3, 4, 5, 6]
+#아래와 같이만 하면 에러 발생
+#print("::".join(numbers))
+print("::".join(
+  map(str, numbers)
+  ))
+
+#연습문제2
+numbers2 = list(range(1, 10 + 1))
+
+print("# 홀수만 추출하기")
+print(list(filter(lambda x: x % 2 == 1 , numbers2)))
+print()
+
+print("# 3 이상, 7 미만 추출하기")
+print(list(filter(lambda x: 3 <= x < 7 , numbers2)))
+print()
+
+print("# 제곱해서 50 미만 추출하기")
+print(list(filter(lambda x: (x ** 2) < 50 , numbers2)))
+print()
