@@ -47,4 +47,7 @@ except IndexError as exception:
 except Exception as exception: #마지막에는 오류가 나더라도 꼭 걸릴 수 있게 Exception을 무조건 사용해 주는 것이 좋다. 
   print("알 수 없는 예외가 발생했습니다.")
   #개발자에게 메일을 보낸다. 
-    
+
+
+# raise 예외객체 -> 개발자를 위한 라이브러리를 개발할 때 주로 사용한다.
+raise Exception("안녕하세요.")
