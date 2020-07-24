@@ -20,22 +20,22 @@ class Student2:
     self.name = name
     self.age = age
   def __eq__(self, other):
-    print("eq() 함수")
+    return (self.age == other.age) and (self.name == other.name)
   def __ne__(self, other):
-    print("ne() 함수")
+    return self.age != other.age
   def __gt__(self, other):
-    print("gt() 함수")
+    return self.age > other.age  
   def __ge__(self, other):
-    print("ge() 함수")
+    return self.age >= other.age
   def __lt__(self, other):
-    print("lt() 함수")
+    return self.age < other.age  
   def __le__(self, other):
-    print("le() 함수")
+    return self.age <= other.age
   
 student2 = Student2("윤인성", 3)
-student2 == student2
-student2 != student2
-student2 > student2
-student2 >= student2
-student2 < student2
-student2 <= student2
+print(student2 == student2)
+print(student2 != student2)
+print(student2 > student2)
+print(student2 >= student2)
+print(student2 < student2)
+print(student2 <= student2)
