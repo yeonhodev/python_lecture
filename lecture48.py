@@ -58,3 +58,37 @@ class Rect3:
 rect3 = Rect3(10, 10)
 rect3.set_width(rect3.get_width() + 10)
 print(rect3.get_area())
+
+# 기본적인 속성: Attribute
+# 어떤 처리를 해준 속성: Property
+
+# Property를 활용해서 문제 해결하기
+class Rect4:
+  def __init__(self, width, height):
+    if width <= 0 or height <= 0:
+      raise Exception("너비와 높이는 음수가 나올 수 없습니다.")
+    self.__width = width
+    self.__height = height
+
+  @property
+  def width(self):
+    return self.__width
+  @width.setter
+  def width(self, width):
+    if width <= 0:
+      raise Exception("너비는 음수가 나올 수 없습니다.")
+    self.__width = width
+
+  def get_height(self):
+    return self.__height
+  def set_height(self, height):
+    if height <= 0:
+      raise Exception("높이는 음수가 나올 수 없습니다.")
+    self.__height = height
+  def get_area(self):
+    return self.__width * self.__height
+
+rect4 = Rect4(10, 10)
+#rect4.set_width(rect4.get_width() + 10)
+rect4.width += 10
+print(rect4.get_area())
