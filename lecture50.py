@@ -24,3 +24,17 @@ print(date1.day)
 print(date1.hour)
 print(date1.minute)
 print(date1.second)
+
+# 보통 시간은 datetime 모듈로 처리하는 경우가 많은데, 특히 time을 사용하는 경우는 time.sleep을 사용해 딜레이를 지정 할 경우이다. 
+import time
+
+print("A")
+time.sleep(2)
+print("B")
+
+from urllib import request
+target = request.urlopen("http://hanbit.co.kr")
+content = target.read()
+
+print(content)
+print(content[:100])
