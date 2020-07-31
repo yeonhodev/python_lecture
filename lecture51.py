@@ -30,3 +30,25 @@ def flatten(data):
 example = [[1, 2, 3], [4, [5, 6]], 7, [8, 9]]
 print("원본: ", example)
 print("변환: ", flatten(example))
+
+#  확인 문제: 이를 활용해 "폴더라면 또 탐색하기"라는 재귀 구성으로 현재 폴더 내부에 있는 모든 파일을 탐색하도록 코드를 작성해 보세요. 
+# 모듈을 읽어 들입니다. 
+import os
+
+# 폴더의 요소 읽어 들이는 함수
+def read_folder(path):
+  print(path)
+  # 폴더의 요소 읽어 들이기
+  output = os.listdir(path)
+  # 폴도의 요소 구분하기
+  for item in output:
+    if os.path.isdir(path + "/" + item):
+      # 폴더라면 계속 읽어 들이기
+      read_folder(path + "/" + item)
+    else:
+      # 파일이라면 출력하기
+      pass
+      #print("파일: ", item)
+
+# 현재 폴더의 파일/폴더를 출력합니다. 
+read_folder(".")
