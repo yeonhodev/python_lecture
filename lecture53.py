@@ -9,4 +9,15 @@ app = Flask(__name__)
 
 @app.route("/") # 데코레이터 : 다다음 강의에서 설명 다시 할 예정
 def hello():
-    return "Hello, World!"
+    return "<h1>안녕하세요!</h1>"
+
+
+"""
+윈도우의 경우; 아래의 명령어를 터미널에서 실행
+set FLASK_APP=lecture53.py # (환경) 변수를 설정하는 부분(터미널을 실행하고 한번만!)
+flask run                  # flask 명령
+
+맥의 경우; 아래의 명령어를 터미널에서 실행
+export FLASK_APP=lecture53.py # (환경) 변수를 설정하는 부분(터미널을 실행하고 한번만!)
+flask run                  # flask 명령
+"""
